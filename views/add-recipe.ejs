@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Recipe</title>
+    <script defer src="/script.js"></script>
+</head>
+<body>
+    <h1>Add a New Recipe</h1>
+    <form action="/recipes/add" method="POST">
+        <label for="name">Recipe Name:</label>
+        <input type="text" name="name" required>
+        
+        <label for="category">Category:</label>
+        <select name="category">
+            <option value="Chicken">Chicken</option>
+            <option value="Beef">Beef</option>
+            <option value="Tofu">Tofu</option>
+            <option value="Grains">Grains</option>
+        </select>
+
+        <label for="instructions">Instructions:</label>
+        <textarea name="instructions" required></textarea>
+
+        <button type="submit">Add Recipe</button>
+    </form>
+</body>
+</html>

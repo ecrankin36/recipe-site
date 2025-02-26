@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipes</title>
+    <script defer src="/script.js"></script>
+</head>
+<body>
+    <h1>Recipe List</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>View</th>
+        </tr>
+        <% recipes.forEach(recipe => { %>
+            <tr>
+                <td><%= recipe.name %></td>
+                <td><%= recipe.category %></td>
+                <td><a href="/recipes/<%= recipe.id %>">View</a></td>
+            </tr>
+        <% }); %>
+    </table>
+    <a href="/recipes/add">Add a Recipe</a>
+</body>
+</html>
